@@ -13,7 +13,7 @@ List<ElevatedButton> getButtons(BuildContext context) {
   const commonName = 'Press Me!';
   List<LgButton> buttColors = <LgButton>[
     LgButton(Colors.red, commonName, 'I am number 1'),
-    LgButton(Colors.yellow, commonName, 'I am numero duo'),
+    LgButton(Colors.amber, commonName, 'I am numero duo'),
     LgButton(Colors.blue, commonName, 'Third'),
     LgButton(Colors.green, commonName, 'Fourth'),
   ];
