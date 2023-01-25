@@ -30,12 +30,15 @@ class LGDemoApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            // Arranging the buttons in a column
-            mainAxisAlignment: MainAxisAlignment.center, // For aesthetics
-            children:
+              // Arranging the buttons in a column
+              mainAxisAlignment: MainAxisAlignment.center, // For aesthetics
+              children: [
+                Image.network(
+                    'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzI4JzY6oUy-dQaiW-HLmn5NQ7qiw7NUOoK-2cDU9cI6JwhPrNv0EkCacuKWFViEgXYrCFzlbCtHZQffY6a73j6_ATFjfeU7r6OxXxN5K8sGjfOlp3vvd6eCXZrozlu34fUG5_cKHmzZWa4axb-vJRKjLr2tryz0Zw30gTv3S0ET57xsCiD25WMPn3wA/s800/LIQUIDGALAXYLOGO.png'),
                 // Calling a modular function to generate dummy buttons
-                getButts(),
-          ),
+                // and spreading it
+                ...getButts(),
+              ]),
         ),
       ),
     );

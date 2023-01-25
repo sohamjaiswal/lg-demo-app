@@ -8,9 +8,9 @@ List<ElevatedButton> getButts() {
   // Here I have also type constrained the variable as a good practice
   List<MaterialColor> buttColors = <MaterialColor>[
     Colors.red,
-    Colors.green,
+    Colors.yellow,
     Colors.blue,
-    Colors.pink
+    Colors.green,
   ];
 
   // I used Elevated Button cuz it has a nice look to it...
