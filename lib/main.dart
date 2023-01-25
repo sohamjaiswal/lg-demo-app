@@ -10,7 +10,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'helpers/getbutts.dart';
+import 'helpers/getbuttons.dart';
 
 void main() {
   // App not started here to increase readability, modularity etc
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
               ),
               // Calling a modular function to generate dummy buttons
               // and spreading it
-              ...getButts(context),
+              ...getButtons(context),
             ]),
       ),
     );
