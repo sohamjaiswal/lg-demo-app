@@ -7,6 +7,31 @@ void main() {
 class LGDemoApp extends StatelessWidget {
   const LGDemoApp({super.key});
 
+  /// Returns 4 butts in various colors!
+  ///
+  List<ElevatedButton> getButts() {
+    List<MaterialColor> buttColors = <MaterialColor>[
+      Colors.red,
+      Colors.green,
+      Colors.blue,
+      Colors.pink
+    ];
+    var butts = <ElevatedButton>[];
+    for (var buttColor in buttColors) {
+      butts.add(
+        ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: buttColor,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          ),
+          child: const Text('Press Me!'),
+        ),
+      );
+    }
+    return butts;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,40 +44,7 @@ class LGDemoApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () => {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 5)),
-                child: const Text('First!'),
-              ),
-              ElevatedButton(
-                onPressed: () => {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 5)),
-                child: const Text('Second!'),
-              ),
-              ElevatedButton(
-                onPressed: () => {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 5)),
-                child: const Text('Third!'),
-              ),
-              ElevatedButton(
-                onPressed: () => {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pink,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 5)),
-                child: const Text('Fourth!'),
-              ),
-            ],
+            children: getButts(),
           ),
         ),
       ),
