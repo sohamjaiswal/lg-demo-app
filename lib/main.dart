@@ -17,7 +17,9 @@ class LGDemoApp extends StatelessWidget {
       Colors.pink
     ];
     var butts = <ElevatedButton>[];
+    var buttLabeler = 1;
     for (var buttColor in buttColors) {
+      var currButtLabel = buttLabeler;
       butts.add(
         ElevatedButton(
           onPressed: () {},
@@ -25,9 +27,10 @@ class LGDemoApp extends StatelessWidget {
             backgroundColor: buttColor,
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           ),
-          child: const Text('Press Me!'),
+          child: Text("Press Me! I am Button $currButtLabel"),
         ),
       );
+      buttLabeler += 1;
     }
     return butts;
   }
