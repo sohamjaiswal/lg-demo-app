@@ -10,7 +10,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'helpers/helper.dart';
+import 'helpers/getbutts.dart';
 
 void main() {
   // App not started here to increase readability, modularity etc
@@ -33,8 +33,12 @@ class LGDemoApp extends StatelessWidget {
               // Arranging the buttons in a column
               mainAxisAlignment: MainAxisAlignment.center, // For aesthetics
               children: [
-                Image.network(
-                    'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzI4JzY6oUy-dQaiW-HLmn5NQ7qiw7NUOoK-2cDU9cI6JwhPrNv0EkCacuKWFViEgXYrCFzlbCtHZQffY6a73j6_ATFjfeU7r6OxXxN5K8sGjfOlp3vvd6eCXZrozlu34fUG5_cKHmzZWa4axb-vJRKjLr2tryz0Zw30gTv3S0ET57xsCiD25WMPn3wA/s800/LIQUIDGALAXYLOGO.png'),
+                // Loading Logo Image from the LG site!
+                FadeInImage.assetNetwork(
+                  placeholder: 'assets/images/loadingloader.gif',
+                  image:
+                      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzI4JzY6oUy-dQaiW-HLmn5NQ7qiw7NUOoK-2cDU9cI6JwhPrNv0EkCacuKWFViEgXYrCFzlbCtHZQffY6a73j6_ATFjfeU7r6OxXxN5K8sGjfOlp3vvd6eCXZrozlu34fUG5_cKHmzZWa4axb-vJRKjLr2tryz0Zw30gTv3S0ET57xsCiD25WMPn3wA/s800/LIQUIDGALAXYLOGO.png',
+                ),
                 // Calling a modular function to generate dummy buttons
                 // and spreading it
                 ...getButts(),
